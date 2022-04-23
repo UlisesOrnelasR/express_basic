@@ -24,6 +24,12 @@ app.get('/objeto', (req, res) => {
     res.send(explorer)
 })
 
+//Agrega una nueva ruta, indica que recibirá un parámetro: /explorers/:explorerName, esto indicará que :explorerName será un valor enviado por la url.
+//El objeto req contiene la propiedad params, esta propiedad contiene los Query Params (parámetros) enviados por la url. (req.params)
+app.get('/explorers/:explorerName',(req, res) => {
+    res.send(req.params)
+})
+
 //con esto inicializamos la app
 app.listen(port, () => {
   console.log(`Server listo on port ${port}`)
