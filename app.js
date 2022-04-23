@@ -15,6 +15,15 @@ app.get('/launchX',(req, res) => {
     res.send('Hola Launch X!!!!!!!!')
 })
 
+//Agrega una nueva ruta y regresa un objeto:
+app.get('/objeto', (req, res) => {
+    const explorer = {
+        name: 'panchito',
+        msg: 'hellooooo'
+    }
+    res.send(explorer)
+})
+
 //con esto inicializamos la app
 app.listen(port, () => {
   console.log(`Server listo on port ${port}`)
