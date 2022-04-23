@@ -9,7 +9,14 @@ const port = 3000 //localhost:3000
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
+
+//Agrega una ruta nueva para poder responder algo en la url localhost:3000/launchx.
+app.get('/launchX',(req, res) => {
+    res.send('Hola Launch X!!!!!!!!')
+})
+
 //con esto inicializamos la app
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Server listo on port ${port}`)
 })
+
